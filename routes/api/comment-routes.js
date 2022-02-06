@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         attributes: ['user_id', 'post_id', 'comment_text']
     })
         .then(dbCommentData => res.json(dbCommentData))
-        .catcn(err => {
+        .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
